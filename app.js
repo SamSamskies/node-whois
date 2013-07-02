@@ -4,24 +4,18 @@
 var fs = require('fs');
 var exec = require('child_process').exec;
 
-// this is the filename for the file containing all the domain names
-var file = process.argv[2];
+// 1. Add code to get the domainName.txt file as an argument passed to the app.
+
 
 // read the file with the keyword phrases
 fs.readFile(__dirname + "/" + file, "Utf-8", function(err, data){
-	//create an array of phrases
-	var arrLines = data.split("\n");
-	for( var key in arrLines){
-		//remove the spaces and convert to a .com domain name
-		var domainName = arrLines[key].replace(/ /g, "") + ".com";
-		// check to see if the domain name is available 
-		query(domainName);
-	}	
+	// 2. Add code here to covert each line into a domain name
 });
 
 
 
 // function to query whois
+// 3. convert this to a custom module
 function query(name){
 	// make thh whois shell command
 	exec('whois ' + name, function(err, results){
