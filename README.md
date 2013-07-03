@@ -1,8 +1,6 @@
 node-whois
 ==========
 
-TODO:
+Command line app that reads keyword phrases from a text file and performs a whois query to see if the equivalent domain name is available.
 
-1. Add code to get the domainName.txt file as an argument
-2. complete the callback function for reading a file.
-2. convert the query function to a custom module.
+Skeleton for this app provided by [@unomateo](https://github.com/unomateo/node-whois).
